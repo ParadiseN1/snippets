@@ -1,0 +1,8 @@
+docker build -t <img_name> .
+
+docker run -d -it --init \
+--gpus=all \
+--volume="$PWD:/app" \
+--publish="8890:8890" \
+--name <cool_name> \
+<img_name> bash
